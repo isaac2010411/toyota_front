@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 
-module.exports = {
+export default  {
+  
   useModel: (id) => {
     const [model, setModel] = useState(null);
 
     useEffect(() => {
+
       let isMounted = true;
+
       async function getData(id) {
         let modelID;
+       
         if (id) {
-          modelID = id;
-        }
-
-        let response = await fetch(`https://challenge.agenciaego.tech/models/`);
+          modelID = id ? id : "" ;
+        };
+      
+        let response = await fetch(`https://challenge.agenciaego.tech/models/${ modelID ? modelID : ""}`);
         let responseJson = await response.json();
+
         if (model === null || model === undefined) {
           setModel(responseJson);
         }
@@ -24,6 +29,7 @@ module.exports = {
       }
 
       return () => (isMounted = false);
+
     }, [model, id]);
 
     return model;

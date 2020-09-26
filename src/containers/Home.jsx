@@ -7,32 +7,30 @@ import GridHome from "../components/GridHome";
 import Card from "../components/Card/Index";
 import Filters from "../components/Filters";
 
+
 export default function Home() {
+
   let data = useModels.useModel();
+
+  
   return (
     <div className="App">
-      <h1
-        style={{
-          fontSize: "50px",
-          fontWeight: "bold",
-          fontStretch: "normal",
-          fontStyle: "normal",
-          lineHeight: "1.14",
-          letterSpacing: "-1px",
-          color: "#373737",
-          marginLeft: "150px"
-        }}
-      >
-        Descubrí todos los modelos
-      </h1>
+      <h1 className='Text-Style-6'> Descubrí todos los modelos</h1>
+
       <Filters/>
-      {data ? (
-        <GridHome>
-          <Card data={data} />
-        </GridHome>
-      ) : (
+
+      {
+        data 
+        ? 
+        <div style={{display:"flex" , justifyContent:"center"}}>
+          <GridHome>
+            <Card data={data} />
+          </GridHome>
+        </div>
+       : 
         <h2>Cargando</h2>
-      )}
+      }
+
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 
 const GridHome = ({ children }) => {
-  console.log(children);
   return (
     <div
       style={{
@@ -9,6 +8,7 @@ const GridHome = ({ children }) => {
         gridTemplateColumns: "repeat( 4 , 268px )",
         gridColumGap: "50px",
         gridRowGap:"50px",
+        
       }}
     >
       {children}
