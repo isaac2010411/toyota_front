@@ -1,0 +1,48 @@
+
+.Card-Container{
+    text-align: center;
+    padding: 3px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.Card-Container:hover :first-child{
+    color: var(--cherry-red);
+}
+.Card-Container:hover :last-child{
+    display: block;
+}
+
+.card-model-button{
+    display: none;
+}
+
+.Text-Style-Title-Card{
+    height: 30px;
+    font-family: Montserrat;
+    font-size: var(--title-desk-size-card);
+    font-weight: var(--font-semi-bold);
+    font-stretch: normal;
+    font-style: normal;
+    line-height:  1.07;
+    letter-spacing: -0.65px;
+    text-align: center;
+    color: var(--title-color-secondary);
+}
+  
+  
+.Text-Style-Price{
+    height: 18px;
+    font-family: Montserrat;
+    font-size: var(--letter-desk-size);
+    font-weight: var(--font-normal);
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    text-align: center;
+    color: var(--text-color-description);
+}
+
+
+    

@@ -1,22 +1,29 @@
 import React from 'react';
-
-
+import './style.css';
 
 const DescriptionSection =({ image , description , title , name , upsideDown })=> {
   
   return(
-    <section style={{display:"flex"}}>
+    <section className="description-container">
       {
         upsideDown
         ?
           <>
-          <TextSection description ={description} title={title} name={name} />
-          <ImageSection image ={image}/>
+          <TextSection 
+            description={description} 
+            title={title} 
+            name={name}
+          />
+          <ImageSection image ={image} name={name}/>
           </>
         :
           <>
-            <ImageSection image ={image}/>
-            <TextSection description ={description} title={title} name={name} />
+            <ImageSection image ={image} name={name}/>
+            <TextSection 
+              description={description}
+              title={title} 
+              name={name} 
+            />
           </>
       }
       
@@ -26,20 +33,23 @@ const DescriptionSection =({ image , description , title , name , upsideDown })=
 
 
 
-const ImageSection =({image})=>{
+const ImageSection = ({image , name})=>{
   return(
-    <section>
-        <img src={`https://challenge.agenciaego.tech${image}`} alt=""/>
+    <section className="description-image-container">
+        <img 
+          src={`https://challenge.agenciaego.tech${image}`} 
+          alt={name}
+        />
     </section>
   )
 }
 
 const TextSection =({description , title , name })=>{
   return(
-    <section>
-      <p>{name}</p>
-      <p>{title}</p>
-      <p>{description}</p>
+    <section className="description-text-container">
+      <h6 className='description-txt-name'>{name}</h6>
+      <p className='description-txt-title'>{title}</p>
+      <p className='description-txt'>{description}</p>
     </section>
   )
 }

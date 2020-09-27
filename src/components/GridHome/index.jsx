@@ -4,11 +4,10 @@ const GridHome = ({ children }) => {
   return (
     <div
       style={{
-        display: "inline-grid",
+        display: "grid",
         gridTemplateColumns: "repeat( 4 , 268px )",
-        gridColumGap: "50px",
-        gridRowGap:"50px",
-        
+        gridColumGap: "70px",
+        gridRowGap:"70px",
       }}
     >
       {children}

@@ -1,5 +1,6 @@
 import React from 'react';
-import NavBar from '../Navbar';
+import FooterComponent from '../Footer';
+import Header from '../Header';
 
 
 
@@ -7,9 +8,10 @@ import NavBar from '../Navbar';
 const Layout = ({children})=>{
 return(
   <>
-    <NavBar/>
-    <hr/>
+    <Header/>
+    <hr style={{marginTop:"-5px"}}/>
     {children}
+    <FooterComponent/>
   </>
   )
 }

@@ -1,0 +1,38 @@
+.slide-container{
+    overflow: hidden;
+    background-color: #f7f7f7;
+    margin: 8px , 0 , 8px , 0;
+    display: flex;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-container > figure {
+    position: relative;
+}
+
+.slide-card-text{
+    margin-top: -15px;
+    height: 54px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: -0.1px;
+    color: #373737;
+}
+
+.slide-card-title{
+    height: 27px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: -0.4px;
+    color: #373737;
+}

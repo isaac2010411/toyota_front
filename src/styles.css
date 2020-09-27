@@ -1,51 +1,75 @@
 :root {
-    --white: #ffffff;
-    --cherry-red: #eb0a1e;
-    --scarlet: #d0021b;
-}
+  --white: #ffffff;
+  --cherry-red: #eb0a1e;
+  --scarlet: #d0021b;
 
+  --title-color-principal:#373737;
+  --title-color-secondary: #000000;
+  --text-color-description:#191919;
+
+  /* Desktop vars*/
+  /*font-size */
+  --title-desk-size:50px;
+  --title-desk-size-card:28px;
+  --letter-desk-size:14px;
+
+
+  --font-normal:normal;
+  --font-semi-bold:600;
+  --font-bold:bold;
+
+
+}
 
 @font-face {
   font-family: Montserrat;
   src: local(Montserrat-Regular),
-    url(/assets/fonts/Montserrat-Regular.woff2) format("woff2"),
-    url(/assets/fonts/Montserrat-Regular.woff) format("woff"),
-    url(/assets/fonts/Montserrat-Regular.ttf) format("truetype");
+    url(/fonts/Montserrat-Regular.woff2) format("woff2"),
+    url(/fonts/Montserrat-Regular.woff) format("woff"),
+    url(/fonts/Montserrat-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
+  font-display: fallback;
+
 }
 @font-face {
   font-family: Montserrat;
   src: local(Montserrat-SemiBold),
-    url(/assets/fonts/Montserrat-SemiBold.woff2) format("woff2"),
-    url(/assets/fonts/Montserrat-SemiBold.woff) format("woff"),
-    url(/assets/fonts/Montserrat-SemiBold.ttf) format("truetype");
+    url(/fonts/Montserrat-SemiBold.woff2) format("woff2"),
+    url(/fonts/Montserrat-SemiBold.woff) format("woff"),
+    url(/fonts/Montserrat-SemiBold.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
+  font-display: fallback;
+
 }
 @font-face {
   font-family: Montserrat;
   src: local(Montserrat-Bold),
-    url(/assets/fonts/Montserrat-Bold.woff2) format("woff2"),
-    url(/assets/fonts/Montserrat-Bold.woff) format("woff"),
-    url(/assets/Fonts/Montserrat-Bold.ttf) format("truetype");
+    url(/fonts/Montserrat-Bold.woff2) format("woff2"),
+    url(/fonts/Montserrat-Bold.woff) format("woff"),
+    url(/fonts/Montserrat-Bold.ttf) format("truetype");
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
+  font-display: fallback;
+
 }
 
-@font-face {
+/* @font-face {
   font-family: ToyotaType;
   src: local(ToyotaType-Semibold),
-    url(/assets/fonts/ToyotaType-Semibold.woff2) format("woff2"),
-    url(/assets/fonts/ToyotaType-Semibold.woff) format("woff"),
-    url(/assets/fonts/ToyotaType-Semibold.ttf) format("truetype");
+    url(/fonts/ToyotaType-Semibold.woff2) format("woff2"),
+    url(/fonts/ToyotaType-Semibold.woff) format("woff"),
+    url(/fonts/ToyotaType-Semibold.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-} 
+  font-display: fallback;
+
+}  */
 
 .Text-Style-6 {
   font-family: Montserrat;
@@ -53,7 +77,7 @@
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.14;
+  line-height: 57px;
   letter-spacing: -1px;
   color: #373737;
 }
@@ -61,7 +85,7 @@
 .Text-Style-2 {
   font-family: Montserrat;
   font-size: 35px;
-  font-weight: bold;
+  font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.26;
@@ -79,6 +103,8 @@
   letter-spacing: normal;
   color: var(--cherry-red);
 }
+
+
 .Text-Style-5 {
   font-family: Montserrat;
   font-size: 14px;
@@ -89,17 +115,21 @@
   letter-spacing: normal;
   color: #191919;
 }
-.Text-Style {
+.Text-Style-Menu{
+  height: 18px;
   font-family: Montserrat;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: -0.28px;
-  text-align: center;
+  letter-spacing: normal;
   color: #191919;
 }
+
+
+
+
 .Text-Style-3 {
   font-family: ToyotaType;
   font-size: 13px;
@@ -111,3 +141,5 @@
   text-align: center;
   color: var(--white);
 }
+
+

@@ -15,10 +15,10 @@ export default function Home() {
   
   return (
     <div className="App">
-      <h1 className='Text-Style-6'> Descubrí todos los modelos</h1>
-
+      <h1 className='Text-Style-6' style={{marginLeft:"11%" , marginTop:"90px", marginBottom:"50px"}}>
+        Descubrí todos los modelos
+      </h1>
       <Filters/>
-
       {
         data 
         ? 
