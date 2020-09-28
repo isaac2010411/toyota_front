@@ -45,7 +45,7 @@
     color: #191919;
 }
 
-.filter-order-toggle{
+.toggle-off{
     display: none;
 }
 
@@ -53,4 +53,11 @@
 .filter-active{
     border-radius: 18px;
     background-color: #f7f7f7;
+}
+
+
+.toggle-on{
+    display: block;
+    position: absolute;
+    z-index: 2;
 }

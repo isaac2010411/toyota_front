@@ -1,0 +1,28 @@
+.toggle-list-container{
+    width: 170px;
+    height: 182px;
+    box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+    background-color: var(--white);
+    margin-left: -77px;
+}
+
+.toggle-list-container >ul{
+    list-style: none;
+    padding: 0%;
+    margin: 0% auto ;
+}
+
+.order-text{
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.5;
+    margin-left: 10px;
+    letter-spacing: -0.1px;
+    color: #191919
+}
+.order-text:hover {
+    background-color: rgba(209, 214, 214, 0.2);
+}

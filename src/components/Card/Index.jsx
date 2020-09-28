@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import ModelButton from '../../assets/negro-fill.svg';
-import './style.css'
-const Card = ({ data }) => {
+import './style.css';
+
+const Card = ({ data , filter}) => {
+
+  let [actualFilter , setActualFilter]=useState(data);
+
+  useEffect(()=>{
+    if(filter !== "Todos"){
+      let actual =  data.filter(element => element.segment === filter);
+      setActualFilter(actual)
+    }else{
+      setActualFilter(data)
+    }
+  },[filter])
 
   return (
     <>
-      {data.map((d) => (
+      {
+        actualFilter.map((d) => (
         <article className='Card-Container'key={d.id}>
           <p className="Text-Style-Title-Card">{d.name}</p>
           <p className="Text-Style-Price" style={{marginTop:"-20px"}}>{d.year} | ${d.price}</p>
@@ -27,7 +40,6 @@ const Card = ({ data }) => {
             />
             </Link> 
           </div>
-          
         </article>
       ))}
     </>

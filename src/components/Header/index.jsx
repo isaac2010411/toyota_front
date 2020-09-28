@@ -10,9 +10,11 @@ import NavComponent from "../Nav";
 
 const Header = () => {
   let history = useHistory().location.pathname;
+  let [isTogle , setIsToggle] =useState("none")
+  let [text , setText]= useState("Menú")
 
   let colors ={
-    isActive : '#eb0a1e',
+    isActive :'#eb0a1e',
     isInact:'#191919'
   }
 
@@ -32,6 +34,14 @@ const Header = () => {
     }
   
   }, [history])
+
+
+  let isToggleMenu = () =>{
+    // setIsToggle("block")
+    // document.body.classList.add("isOpen")
+    setText("Cerrar")
+  }
+
   return (
     <>
     <header>
@@ -60,11 +70,11 @@ const Header = () => {
       </div>
      
       <div style={{display:"flex", alignItems:"center"}}>
-        <h6 style={{marginRight:"10px"}} className="Text-Style-5"> Menú</h6>
-        <img src={Gray} alt='Button menu'/>
+        <h6 style={{marginRight:"10px"}} className="Text-Style-5">{text}</h6>
+        <img onClick = {isToggleMenu} src={Gray} alt='Button menu'/>
       </div>
     </header>
-    <NavComponent/>
+      <NavComponent display={isTogle} />
     </>
   );
 };

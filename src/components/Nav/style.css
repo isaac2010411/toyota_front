@@ -1,0 +1,24 @@
+nav{
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    padding: 3px;
+    z-index: 3;
+    float: right;
+}
+
+
+.isOpen{
+   
+}
+
+
+/*ismobile
+nav{
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    padding: 3px;
+    float: right;
+}
+*/
