@@ -8,9 +8,26 @@ import './style.css';
 
 const Filters =()=>{
 
-  let toggleLis =() => {
-    
+  const toggleFilter = (e) => {
+
+    let elementCurrent = e.target.classList[1];
+
+    if( elementCurrent !== "filter-active" ){
+
+      let actualCurrent = e.target.innerHTML;
+      let isCative = document.getElementsByClassName('filter-text');
+
+      for(let i = 0 ; i< isCative.length ; i++){
+        isCative[i].classList.remove('filter-active')
+        if(actualCurrent === isCative[i].innerHTML){
+          isCative[i].classList.add("filter-active")
+        }
+       
+      }
+        
+    }
   }
+
 
   return(
     <>
@@ -20,10 +37,10 @@ const Filters =()=>{
         <h6 className="filter-text-title">Filtrar por </h6>
         <>
           <ul>
-            <li className='filter-text'>Todos</li>
-            <li className='filter-text'>Autos</li>
-            <li className='filter-text'>Pickups y Comerciales</li>
-            <li className='filter-text'>SUVs y Crossovers</li>
+            <li onClick={(e)=>toggleFilter(e)} className='filter-text filter-active'>Todos</li>
+            <li onClick={(e)=>toggleFilter(e)} className='filter-text'>Autos</li>
+            <li onClick={(e)=>toggleFilter(e)} className='filter-text'>Pickups y Comerciales</li>
+            <li onClick={(e)=>toggleFilter(e)} className='filter-text'>SUVs y Crossovers</li>
           </ul>
         </>
       </div>

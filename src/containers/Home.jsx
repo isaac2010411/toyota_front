@@ -11,11 +11,10 @@ import Filters from "../components/Filters";
 export default function Home() {
 
   let data = useModels.useModel();
-
   
   return (
     <div className="App">
-      <h1 className='Text-Style-6' style={{marginLeft:"11%" , marginTop:"90px", marginBottom:"50px"}}>
+      <h1 className='Text-Style-6' style={{marginLeft:"15%" , marginTop:"90px", marginBottom:"50px"}}>
         Descubrí todos los modelos
       </h1>
       <Filters/>

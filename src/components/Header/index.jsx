@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useState , useEffect} from "react";
+
+import { Link, useHistory , withRouter} from 'react-router-dom';
 
 import './style.css';
 
@@ -8,6 +9,29 @@ import Logo from '../../assets/logo.svg';
 import NavComponent from "../Nav";
 
 const Header = () => {
+  let history = useHistory().location.pathname;
+
+  let colors ={
+    isActive : '#eb0a1e',
+    isInact:'#191919'
+  }
+
+  useEffect(() => {
+    let isMounted = true;
+
+    function returnHistory (){
+      return history;
+    }
+
+    if(isMounted){
+      returnHistory()
+    }
+    
+    return () => {
+      isMounted=false
+    }
+  
+  }, [history])
   return (
     <>
     <header>
@@ -17,8 +41,21 @@ const Header = () => {
           alt="LogoImage"
        />
         <ul>
-          <li className="header-text"><Link to='/'>Modelos</Link></li>
-          <li className="header-text" style={{marginLeft:"70px"}}>Ficha de modelo</li> 
+          <li >
+            <Link 
+              to='/' 
+              className="header-text" 
+              style={{color:`${history === '/' ? colors.isActive : colors.isInact}`}}
+              >
+                Modelos
+              </Link>
+          </li>
+          <li 
+            className="header-text"
+            style={{marginLeft:"70px" , color:`${history !== '/'? colors.isActive :colors.isInact}`}}
+          >
+            Ficha de modelo
+          </li> 
         </ul>
       </div>
      
@@ -32,4 +69,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

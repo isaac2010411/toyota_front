@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    cursor: pointer;
 }
 
 .filter-toggle-fil{
@@ -46,4 +47,10 @@
 
 .filter-order-toggle{
     display: none;
+}
+
+
+.filter-active{
+    border-radius: 18px;
+    background-color: #f7f7f7;
 }
