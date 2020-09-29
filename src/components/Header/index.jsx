@@ -10,8 +10,7 @@ import NavComponent from "../Nav";
 
 const Header = () => {
   let history = useHistory().location.pathname;
-  let [isTogle , setIsToggle] =useState("none")
-  let [text , setText]= useState("Menú")
+  let [isTogle , setIsToggle] = useState(["none" , null ])
 
   let colors ={
     isActive :'#eb0a1e',
@@ -36,10 +35,16 @@ const Header = () => {
   }, [history])
 
 
+
   let isToggleMenu = () =>{
-    // setIsToggle("block")
-    // document.body.classList.add("isOpen")
-    setText("Cerrar")
+    console.log(isTogle)
+    if(isTogle[0]==='none'){
+      document.body.classList.add("nav-selected-body")
+     return setIsToggle(["block" , "dark"])
+    }else{
+      document.body.classList.remove("nav-selected-body")
+      setIsToggle(["none",null])
+    }
   }
 
   return (
@@ -70,11 +75,14 @@ const Header = () => {
       </div>
      
       <div style={{display:"flex", alignItems:"center"}}>
-        <h6 style={{marginRight:"10px"}} className="Text-Style-5">{text}</h6>
-        <img onClick = {isToggleMenu} src={Gray} alt='Button menu'/>
+ 
+          <h6 style={{marginRight:"10px"}} className="Text-Style-5">Menú <img onClick={isToggleMenu} src={Gray} alt='Button menu'/></h6>
+      
       </div>
     </header>
-      <NavComponent display={isTogle} />
+   
+      <NavComponent isTogle={isTogle} isToggleMenu={isToggleMenu}/>
+ 
     </>
   );
 };
