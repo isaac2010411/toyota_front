@@ -9,8 +9,6 @@
     margin-top: 8%;
     margin-bottom: 8%;
 }
-
-
 .description-image-container{
     width: 40%;
     margin: auto;
@@ -76,5 +74,4 @@
     .description-txt{
         padding: 10px;
     }
-
 }

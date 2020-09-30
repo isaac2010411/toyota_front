@@ -33,7 +33,7 @@ const Slider =({features})=>{
         <div className="slide-container">
             <div 
                 className="slide-container-buttons"
-                style={{right:"95%"}} 
+                style={{right:"90%"}} 
                 onClick={(e)=>handleCurrent(e)}
                 name='ant' 
             >
@@ -59,7 +59,7 @@ const Slider =({features})=>{
             } 
              <div 
                 className="slide-container-buttons"
-                style={{left:"97%" }}
+                style={{left:"85%"}}
                 onClick={(e)=>handleCurrent(e)} 
                 name='nex' 
                 >
