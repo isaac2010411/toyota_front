@@ -4,23 +4,48 @@ import { Link } from "react-router-dom";
 import ModelButton from '../../assets/negro-fill.svg';
 import './style.css';
 
-const Card = ({ data , filter}) => {
-
-  let [actualFilter , setActualFilter]=useState(data);
-
+const Card = ({ data , filter , order }) => {
+  let  [initialState , setInitialState ] = useState(data)
+  //Filter 
   useEffect(()=>{
     if(filter !== "Todos"){
-      let actual =  data.filter(element => element.segment === filter);
-      setActualFilter(actual)
-    }else{
-      setActualFilter(data)
+      let actual = data.filter(element => element.segment === filter);
+      return setInitialState(actual)
     }
-  },[filter])
+    return setInitialState(data);
+
+  },[filter , order])
+
+
+  let orderB =(orderBy , dataOrder )=>{
+    console.log(dataOrder)
+    switch (orderBy) {
+    
+      case "nada":
+        let nada = dataOrder.sort((a, b) => a.id - b.id);
+      return nada;
+      case "mayor":
+         let may = dataOrder.sort((a, b) => b.price - a.price );
+      return may;
+      case "menor":
+        let men = dataOrder.sort((a, b) =>  a.price - b.price );
+      return men
+      case "nuevos":
+        let neww = dataOrder.sort((a, b) =>  b.year - a.year );
+      return neww;
+      case "viejos":  
+       let old = dataOrder.sort((a, b) => a.year -  b.year );
+        return old;
+        default:
+      break;
+    }
+  }
+
 
   return (
     <>
       {
-        actualFilter.map((d) => (
+        orderB(order ,initialState).map((d) => (
         <article className='Card-Container'key={d.id}>
           <p className="Text-Style-Title-Card">{d.name}</p>
           <p className="Text-Style-Price" style={{marginTop:"-20px"}}>{d.year} | ${d.price}</p>
@@ -41,6 +66,7 @@ const Card = ({ data , filter}) => {
             </Link> 
           </div>
         </article>
+  
       ))}
     </>
   );

@@ -6,8 +6,8 @@ import ToggleList from '../ToggleList';
 
 import './style.css';
 
-const Filters =({setFilter})=>{
-
+const Filters =({setFilter , setOrder })=>{
+  
   const toggleFilter = (e) => {
     let actulFilter = e.target.innerHTML;
     setFilter(actulFilter)
@@ -24,6 +24,8 @@ const Filters =({setFilter})=>{
       }
     }
   }
+
+
 
   return(
     <>
@@ -42,7 +44,7 @@ const Filters =({setFilter})=>{
       </div>
 
       <div className="filter-toggle-ord">
-          <OrderComponent/>
+          <OrderComponent setOrder={setOrder}/>
       </div>
       
     </div>
@@ -51,7 +53,7 @@ const Filters =({setFilter})=>{
   )
 }
 
-const OrderComponent =()=>{
+const OrderComponent =({setOrder})=>{
   let toggleList = ()=> {
     let isToggle = document.getElementById("order-toggle")
     if(isToggle.classList[0]==="toggle-off"){
@@ -66,7 +68,7 @@ const OrderComponent =()=>{
         <img src={Fill} alt="toggle-image"/> 
       </h6>
       <div id='order-toggle' className="toggle-off">
-          <ToggleList/>
+          <ToggleList setOrder={setOrder}/>
       </div>
     </>
   )
