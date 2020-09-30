@@ -31,10 +31,18 @@ const Slider =({features})=>{
 
     return(
         <div className="slide-container">
-            <div >
-               <img onClick={(e)=>handleCurrent(e)}name='ant' style={{position:"absolute",right:"95%",zIndex:"100"}} src={Fill} alt=''></img>
+            <div 
+                className="slide-container-buttons"
+                style={{right:"95%"}} 
+                onClick={(e)=>handleCurrent(e)}
+                name='ant' 
+            >
+               <img 
+                    className='slide-buttons' 
+                    src={Fill} 
+                    alt=''
+                />
             </div>
-          
             {
                 actualFeatures &&
                 actualFeatures.map( (fe , i) => (
@@ -49,11 +57,19 @@ const Slider =({features})=>{
                     </figure>
                 ))
             } 
-             <div >
-               <img onClick={(e)=>handleCurrent(e)} name='nex' style={{position:"absolute",left:"95%",zIndex:"100",transform:"rotate(-180deg)"}} src={Fill} alt=''></img>
+             <div 
+                className="slide-container-buttons"
+                style={{left:"97%" }}
+                onClick={(e)=>handleCurrent(e)} 
+                name='nex' 
+                >
+               <img 
+                    className='slide-buttons'
+                    style={{ transform:"rotate(-180deg)"}} 
+                    src={Fill} 
+                    alt=''
+                />
             </div>
-            
-
         </div>
         
     )

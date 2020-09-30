@@ -3,7 +3,7 @@ header{
   width: 100%;
   height: 70px;
   justify-content: space-between;
-  
+  align-items: center;
 }
 
 .header-logo-container{
@@ -31,3 +31,8 @@ header{
   color: #191919;
 }
 
+@media only screen and (max-width: 600px) {
+  .header-logo-container > ul{
+   display: none;
+  }
+}

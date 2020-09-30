@@ -1,15 +1,8 @@
 import React from "react";
-
+import './style.css';
 const GridHome = ({ children }) => {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat( 4 , 268px )",
-        gridColumGap: "70px",
-        gridRowGap:"70px",
-      }}
-    >
+    <div className='grid-container'>
       {children}
     </div>
   );

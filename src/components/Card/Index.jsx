@@ -16,20 +16,18 @@ const Card = ({ data , filter , order }) => {
 
   },[filter , order])
 
-
   let orderB =(orderBy , dataOrder )=>{
-    console.log(dataOrder)
+
     switch (orderBy) {
-    
       case "nada":
-        let nada = dataOrder.sort((a, b) => a.id - b.id);
-      return nada;
+        let nothing = dataOrder.sort((a, b) => a.id - b.id);
+      return nothing;
       case "mayor":
-         let may = dataOrder.sort((a, b) => b.price - a.price );
-      return may;
+         let big = dataOrder.sort((a, b) => b.price - a.price );
+      return big;
       case "menor":
-        let men = dataOrder.sort((a, b) =>  a.price - b.price );
-      return men
+        let small = dataOrder.sort((a, b) =>  a.price - b.price );
+      return small
       case "nuevos":
         let neww = dataOrder.sort((a, b) =>  b.year - a.year );
       return neww;

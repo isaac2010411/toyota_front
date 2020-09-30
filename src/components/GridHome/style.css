@@ -1,0 +1,14 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4 ,268px);
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container{
+        grid-template-columns: repeat(1,268px);
+        column-gap: 50px;
+        row-gap: 50px;
+    }    
+}
