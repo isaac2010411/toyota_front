@@ -37,7 +37,6 @@ const Header = () => {
 
 
   let isToggleMenu = () =>{
-    console.log(isTogle)
     if(isTogle[0]==='none'){
       document.body.classList.add("nav-selected-body")
      return setIsToggle(["block" , "dark"])
@@ -51,10 +50,12 @@ const Header = () => {
     <>
     <header>
       <div className="header-logo-container">
-        <img
-          src={Logo}
-          alt="LogoImage"
-       />
+        <Link to='/'>
+          <img
+            src={Logo}
+            alt="LogoImage"
+        />
+       </Link>
         <ul>
           <li >
             <Link 
