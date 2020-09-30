@@ -13,7 +13,7 @@ const ModelPage =()=>{
   
   return(
     
-    <>
+    <div className="detail-container">
     {
       data 
       ?
@@ -45,7 +45,7 @@ const ModelPage =()=>{
       <h5>Cargando</h5>
     }
       
-    </>
+    </div>
   )
 };
 

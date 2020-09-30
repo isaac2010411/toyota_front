@@ -1,6 +1,9 @@
+.detail-container{
+    width: 100%;
+}
+
 .description-container{
     display: flex;
-    height: 100%;
     width: 100%;
     justify-content: space-around;
     margin-top: 8%;
@@ -13,7 +16,7 @@
     margin: auto;
 }
 
-.description-image-container > img{
+.description-image-container > img {
     width: 100%;
 }
 
@@ -23,7 +26,6 @@
 }
 
 .description-txt-title{
-    width: 475px;
     font-family: Montserrat;
     font-size: 50px;
     font-weight: 600;
@@ -47,7 +49,6 @@
 }
 
 .description-txt{
-    width: 385px;
     font-family: Montserrat;
     font-size: 16px;
     font-weight: normal;
@@ -57,4 +58,23 @@
     letter-spacing: -0.1px;
     color: #373737;
   
+}
+
+@media only screen and (max-width: 600px) {
+    .description-container{
+       flex-direction: column;
+    }
+    .description-image-container{
+        width: 100%;
+    }
+    .description-text-container{
+        width: 100%;
+    }
+    .description-txt-title{
+        font-size: 35px;
+    }
+    .description-txt{
+        padding: 10px;
+    }
+
 }

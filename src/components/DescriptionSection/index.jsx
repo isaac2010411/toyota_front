@@ -26,7 +26,6 @@ const DescriptionSection =({ image , description , title , name , upsideDown })=
             />
           </>
       }
-      
     </section>
   )
 };
