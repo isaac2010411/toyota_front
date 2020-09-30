@@ -52,12 +52,12 @@ const Slider =({features})=>{
              <div >
                <img onClick={(e)=>handleCurrent(e)} name='nex' style={{position:"absolute",left:"95%",zIndex:"100",transform:"rotate(-180deg)"}} src={Fill} alt=''></img>
             </div>
+            
+
         </div>
         
     )
 };
-
-
 
 
 export default Slider;
