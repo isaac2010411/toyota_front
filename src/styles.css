@@ -113,10 +113,6 @@
   letter-spacing: normal;
   color: #191919;
 }
-
-
-
-
 .Text-Style-3 {
   font-family: ToyotaType;
   font-size: 13px;
@@ -129,7 +125,16 @@
   color: var(--white);
 }
 
-
-.App{
-  width: 100%;
+@media only screen and (max-width: 600px) {
+  .Text-Style-6 {
+    height: 88px;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.26;
+    letter-spacing: -0.7px;
+    color: #191919;
+  }
 }

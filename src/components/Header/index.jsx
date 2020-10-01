@@ -10,7 +10,7 @@ import NavComponent from "../Nav";
 
 const Header = () => {
   let history = useHistory().location.pathname;
-  let [isTogle , setIsToggle] = useState(["none" , null ])
+  let [isTogle , setIsToggle] = useState(["none" , null ]);
 
   let colors ={
     isActive :'#eb0a1e',
@@ -32,17 +32,26 @@ const Header = () => {
       isMounted=false
     }
   
-  }, [history])
-
-
+  }, [history]);
 
   let isToggleMenu = () =>{
     if(isTogle[0]==='none'){
-      document.body.classList.add("nav-selected-body")
-     return setIsToggle(["block" , "dark"])
-    }else{
-      document.body.classList.remove("nav-selected-body")
-      setIsToggle(["none",null])
+      if(history ==='/'){
+        document.getElementById("home-container").style.display="none";
+      }
+      else{
+        document.getElementById("detail-container").style.display="none";
+      }
+     return setIsToggle(["block" , "dark"]);
+    }
+    else{
+      if(history ==='/'){
+        document.getElementById("home-container").style.display="block";
+      }
+      else{
+        document.getElementById("detail-container").style.display="block";
+      }
+     return setIsToggle(["none",null]);
     }
   }
 
@@ -57,7 +66,7 @@ const Header = () => {
         />
        </Link>
         <ul>
-          <li >
+          <li>
             <Link 
               to='/' 
               className="header-text" 
@@ -76,14 +85,22 @@ const Header = () => {
       </div>
      
       <div style={{display:"flex", alignItems:"center"}}>
- 
-          <h6 style={{marginRight:"10px"}} className="Text-Style-5">Menú <img onClick={isToggleMenu} src={Gray} alt='Button menu'/></h6>
-      
+          <h6 
+            style={{marginRight:"10px"}} 
+            className="Text-Style-5">
+              Menú 
+          </h6>
+          <img 
+            onClick={isToggleMenu} 
+            src={Gray} 
+            alt='Button menu'
+          />
       </div>
     </header>
-   
-      <NavComponent isTogle={isTogle} isToggleMenu={isToggleMenu}/>
- 
+      <NavComponent 
+        isTogle={isTogle} 
+        isToggleMenu={isToggleMenu}
+      />
     </>
   );
 };

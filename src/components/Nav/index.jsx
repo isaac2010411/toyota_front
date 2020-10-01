@@ -9,7 +9,7 @@ const NavComponent =({isTogle , isToggleMenu})=>{
         <div className={isTogle[1]}>
             <nav style={{display:isTogle[0]}}>
                 <ul style={{listStyle:"none"}} className='nav-ul'>
-                    <li className='nav-close' style={{marginRight:"-20px"}}>Cerrar <img onClick={isToggleMenu} src={Fill} alt='close-button'/></li>
+                    <li className='nav-close' style={{marginRight:"-20px" , padding:"15px"}}>Cerrar <img onClick={isToggleMenu} src={Fill} alt='close-button'/></li>
                     <li className='nav-text'>Modelos</li>
                     <li className='nav-text'>Servicios y accesorios</li>
                     <li className='nav-text'>Financiacion</li>

@@ -14,9 +14,9 @@ export default function Home() {
   let [order , setOrder]= useState("nada");
 
   return (
-    <div className="App">
+    <div id="home-container">
       <h1 className='Text-Style-6' 
-      style={{marginLeft:"15%" , marginTop:"90px", marginBottom:"50px"}}
+      style={{marginLeft:"5%" , marginTop:"90px", marginBottom:"50px"}}
       >
         Descubrí todos los modelos
       </h1>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const DescriptionSection =({ image , description , title , name , upsideDown })=> {
+const DescriptionSection = ({ image , description , title , name , upsideDown })=> {
   
   return(
     <section className="description-container">
@@ -9,16 +9,22 @@ const DescriptionSection =({ image , description , title , name , upsideDown })=
         upsideDown
         ?
           <>
-          <TextSection 
-            description={description} 
-            title={title} 
-            name={name}
-          />
-          <ImageSection image ={image} name={name}/>
+            <TextSection 
+              description={description} 
+              title={title} 
+              name={name}
+            />
+            <ImageSection 
+              image={image} 
+              name={name}
+            />
           </>
         :
           <>
-            <ImageSection image ={image} name={name}/>
+            <ImageSection 
+              image ={image} 
+              name={name}
+            />
             <TextSection 
               description={description}
               title={title} 
@@ -45,7 +51,8 @@ const ImageSection = ({image , name})=>{
 
 const TextSection =({description , title , name })=>{
   return(
-    <section className="description-text-container">
+    <section 
+      className="description-text-container">
       <h6 className='description-txt-name'>{name}</h6>
       <p className='description-txt-title'>{title}</p>
       <p className='description-txt'>{description}</p>

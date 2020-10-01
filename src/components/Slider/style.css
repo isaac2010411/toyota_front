@@ -9,7 +9,6 @@
 .slide-container > figure {
     position: relative;
 }
-
 .slide-card-text{
     margin-top: -15px;
     height: 54px;
@@ -44,7 +43,7 @@
     width: 45px;
     height: 146px;
     background-color: rgba(255, 255, 255, 0.56);
-    margin-top: 17px;
+    margin-top: 18px;
 }
 
 
@@ -53,3 +52,4 @@
         display: none;
     }
 }
+

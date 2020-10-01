@@ -12,6 +12,7 @@ const ToggleList =({setOrder})=>{
     }
     setOrder(action[1]);
   }
+
   return(
     <div className="toggle-list-container">
       <ul>
@@ -43,8 +44,7 @@ const ToggleList =({setOrder})=>{
           onClick={(e)=>toggleOrder(e)} 
           className='order-text'
         >
-          Más viejos primero 
-        </li>
+          Más viejos primero </li>
       </ul>
     </div>
   )

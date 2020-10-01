@@ -17,7 +17,6 @@ const Card = ({ data , filter , order }) => {
   },[filter , order])
 
   let orderB =(orderBy , dataOrder )=>{
-
     switch (orderBy) {
       case "nada":
         let nothing = dataOrder.sort((a, b) => a.id - b.id);

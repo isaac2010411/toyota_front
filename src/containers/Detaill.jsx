@@ -12,13 +12,11 @@ const ModelPage =()=>{
   let data = useModels.useModel(id);
   
   return(
-    
-    <div className="detail-container">
+    <div id="detail-container">
     {
       data 
       ?
       <>
-
         <DescriptionSection 
           image ={data.photo} 
           title ={data.title} 
@@ -44,7 +42,6 @@ const ModelPage =()=>{
       :
       <h5>Cargando</h5>
     }
-      
     </div>
   )
 };
