@@ -1,9 +1,8 @@
 .toggle-list-container{
-    width: 170px;
-    height: 182px;
-    box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
-    background-color: var(--white);
-    margin-left: -77px;
+     width: 158px;
+  height: 182px;
+  box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: var(--white);
 }
 
 .toggle-list-container >ul{

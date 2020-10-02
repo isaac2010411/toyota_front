@@ -1,0 +1,29 @@
+.secontContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.first-container{
+    width: 158px;
+    background-color: white;
+    box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.first-container > ul{
+    margin: 0%;
+    padding: 0%;
+}
+
+.filter-text-title{
+    height: 14px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.08px;
+    color: #373737;
+}

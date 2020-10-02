@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Fill from '../../assets/fill-1.svg';
 
-
-import ToggleList from '../ToggleList';
-
 import './style.css';
 
-const Filters =({setFilter , setOrder })=>{
+const Filters = ({setFilter , setOrder })=>{
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
