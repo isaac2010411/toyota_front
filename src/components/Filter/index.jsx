@@ -1,6 +1,6 @@
 import React, { useState , useEffect } from 'react';
 import OrderComponent from '../OrderComponent';
-
+import Fill from '../../assets/fill-1.svg'
 import './style.css';
 
 
@@ -9,7 +9,6 @@ const Filter = ({setFilter , setOrder})=>{
     const [width, setWidth] = useState(0);
 
     useEffect(() => {
-     
       const updateWidth = () => {
         const width = document.body.clientWidth;
         setWidth(width);
@@ -102,7 +101,7 @@ const Filter = ({setFilter , setOrder})=>{
 const ToggleComponent =({children , name , right , left})=>{
 
     let [ isHiden , setIsHiden ] = useState(true);
-    let handleHidden =()=>{
+    let handleHidden =(e)=>{
         if(!isHiden){
            return setIsHiden(true)
         }
@@ -115,6 +114,7 @@ const ToggleComponent =({children , name , right , left})=>{
                 className="filter-text-title"
             >
                 {name}
+                <img src={Fill} alt='filter-image' style={{ transform:`${isHiden ? 'rotate(-180deg)' : 'rotate(0deg)'}`}}></img>
             </h2>
             <div 
                 hidden={isHiden} 

@@ -32,8 +32,7 @@ const Slider =({features})=>{
     return(
         <div className="slide-container">
             <div 
-                className="slide-container-buttons"
-                style={{right:"90%"}} 
+                className="slide-container-buttons-r"
                 onClick={(e)=>handleCurrent(e)}
                 name='ant' 
             >
@@ -58,8 +57,7 @@ const Slider =({features})=>{
                 ))
             } 
              <div 
-                className="slide-container-buttons"
-                style={{left:"85%"}}
+                className="slide-container-buttons-l"
                 onClick={(e)=>handleCurrent(e)} 
                 name='nex' 
                 >
@@ -70,7 +68,7 @@ const Slider =({features})=>{
                     alt=''
                 />
             </div>
-        </div>
+        </div> 
         
     )
 };

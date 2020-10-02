@@ -9,6 +9,7 @@
     list-style: none;
     padding: 0%;
     margin: 0% auto ;
+    
 }
 
 .order-text{
@@ -22,6 +23,7 @@
     letter-spacing: -0.1px;
     color: var(--text-color-description);
 }
+
 .order-text:hover {
     background-color: rgba(209, 214, 214, 0.2);
 }

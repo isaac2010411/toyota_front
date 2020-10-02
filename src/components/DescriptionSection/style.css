@@ -64,9 +64,11 @@
     }
     .description-image-container{
         width: 100%;
+        order: 0;
     }
     .description-text-container{
         width: 100%;
+        order: 1;
     }
     .description-txt-title{
         font-size: 35px;

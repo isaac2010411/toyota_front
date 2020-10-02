@@ -22,13 +22,13 @@ header{
 .header-text-menu{
   height: 18px;
   font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: var(--letter-desk-size);
+  font-weight: var(--font-semi-bold);
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #191919;
+  color:var(--text-color-description);
 }
 
 .header-text{
@@ -41,7 +41,7 @@ header{
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(#191919);
+  color: var(--text-color-description);
 }
 
 @media only screen and (max-width: 760px) {

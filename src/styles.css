@@ -56,7 +56,16 @@
   font-style: normal;
   font-stretch: normal;
   font-display: fallback;
-
+}
+@font-face {
+  font-family: ToyotaType;
+  src: local(ToyotaType-Semibold),
+    url(/fonts/ToyotaType-Semibold.woff2) format("woff2"),
+    url(/fonts/ToyotaType-Semibold.woff) format("woff");
+    /* url(/fonts/ToyotaType-Semibold.ttf) format("truetype"); */
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 .Text-Style-3 {

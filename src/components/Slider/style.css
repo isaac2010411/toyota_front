@@ -9,6 +9,8 @@
 .slide-container > figure {
     position: relative;
 }
+
+
 .slide-card-text{
     margin-top: -15px;
     height: 54px;
@@ -34,7 +36,7 @@
     color: var(--title-color-principal);
 }
 
-.slide-container-buttons{
+.slide-container-buttons-l{
     position: absolute;
     z-index: 50;
     display: flex;
@@ -44,12 +46,28 @@
     height: 146px;
     background-color: rgba(255, 255, 255, 0.56);
     margin-top: 18px;
+    left: 97%;
+}
+.slide-container-buttons-r{
+    position: absolute;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 146px;
+    background-color: rgba(255, 255, 255, 0.56);
+    margin-top: 18px;
+    right: 97%;
 }
 
 
 @media only screen and (max-width: 600px) {
-    .slide-container-buttons:nth-child(1){
+    .slide-container-buttons-r{
         display: none;
+    }
+    .slide-container-buttons-l{
+        left: 83%;
     }
 }
 
