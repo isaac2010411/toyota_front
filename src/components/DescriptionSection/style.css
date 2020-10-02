@@ -25,36 +25,36 @@
 
 .description-txt-title{
     font-family: Montserrat;
-    font-size: 50px;
-    font-weight: 600;
+    font-size: var(--title-desk-size);
+    font-weight: var(--font-semi-bold);
     font-stretch: normal;
     font-style: normal;
     line-height: 1.14;
     letter-spacing: -1px;
-    color: #373737;
+    color: var(--title-color-principal);
 }
 
 .description-txt-name{
     margin-bottom: -30px;
     font-family: Montserrat;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: var(--font-semi-bold);
     font-stretch: normal;
     font-style: normal;
     line-height: 1.35;
     letter-spacing: normal;
-    color: #373737;
+    color: var(--title-color-principal);
 }
 
 .description-txt{
     font-family: Montserrat;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: var(--font-normal);
     font-stretch: normal;
     font-style: normal;
     line-height: 1.69;
     letter-spacing: -0.1px;
-    color: #373737;
+    color: var(--title-color-principal);
   
 }
 

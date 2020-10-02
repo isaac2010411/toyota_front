@@ -9,7 +9,17 @@ const NavComponent =({isTogle , isToggleMenu})=>{
         <div className={isTogle[1]}>
             <nav style={{display:isTogle[0]}}>
                 <ul  className='nav-ul'>
-                    <li className='nav-close' style={{textAlign:"right"}}>Cerrar <img onClick={isToggleMenu} src={Fill} alt='close-button'/></li>
+                    <li 
+                        className='nav-close' 
+                        style={{textAlign:"right"}}
+                    >   
+                            Cerrar
+                        <img 
+                            onClick={isToggleMenu}
+                            src={Fill} 
+                            alt='close-button'
+                        />
+                    </li>
                 </ul>
                     <BlockNav>
                         <ul className='nav-ul' >
@@ -37,7 +47,7 @@ const NavComponent =({isTogle , isToggleMenu})=>{
                         </ul>
                     </BlockNav>
                     <BlockNav>
-                        <ul className='nav-ul'>
+                        <ul className='nav-ul' style={{backgroundColor:"#efeeef"}}>
                             <li className='nav-text'>Servicios al Cliente</li>
                             <li className='nav-text'>Ventas Especiales</li>
                             <li className='nav-text'>Innovacion</li>

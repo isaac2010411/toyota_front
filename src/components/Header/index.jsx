@@ -36,20 +36,31 @@ const Header = () => {
 
   let isToggleMenu = () =>{
     if(isTogle[0]==='none'){
+
       if(history ==='/'){
-        document.getElementById("home-container").style.display="none";
+        document
+          .getElementById("home-container")
+          .style.display="none";
       }
       else{
-        document.getElementById("detail-container").style.display="none";
+        document
+          .getElementById("detail-container")
+          .style.display="none";
       }
+
      return setIsToggle(["block" , "dark"]);
+
     }
     else{
       if(history ==='/'){
-        document.getElementById("home-container").style.display="block";
+        document
+          .getElementById("home-container")
+          .style.display="block";
       }
       else{
-        document.getElementById("detail-container").style.display="block";
+        document
+          .getElementById("detail-container")
+          .style.display="block";
       }
      return setIsToggle(["none",null]);
     }
@@ -63,31 +74,34 @@ const Header = () => {
           <img
             src={Logo}
             alt="LogoImage"
-        />
-       </Link>
-        <ul>
-          <li>
+            style={{marginLeft:"10px"}}
+          />
+        </Link>
+        <div>
+          <div style={{borderBottom:`${history === '/' ?  ' solid 4px #eb0a1e' : ''}`,padding:"20px"}}>
             <Link 
               to='/' 
               className="header-text" 
               style={{color:`${history === '/' ? colors.isActive : colors.isInact}`}}
-              >
-                Modelos
-              </Link>
-          </li>
-          <li 
-            className="header-text"
-            style={{marginLeft:"70px" , color:`${history !== '/'? colors.isActive :colors.isInact}`}}
-          >
-            Ficha de modelo
-          </li> 
-        </ul>
+            >
+              Modelos
+            </Link>
+          </div>
+          <div style={{borderBottom:`${history === '/' ?  '' : 'solid 4px #eb0a1e'}`,padding:"20px"}}>
+            <Link 
+              className="header-text"
+              style={{color:`${history !== '/'? colors.isActive :colors.isInact}`}}
+            >
+              Ficha de modelo
+            </Link>
+          </div>
+        </div>
       </div>
      
       <div style={{display:"flex", alignItems:"center"}}>
           <h6 
             style={{marginRight:"10px"}} 
-            className="Text-Style-5">
+            className="header-text-menu">
               Menú 
           </h6>
           <img 

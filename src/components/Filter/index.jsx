@@ -1,9 +1,11 @@
 import React, { useState , useEffect } from 'react';
 import OrderComponent from '../OrderComponent';
+
 import './style.css';
 
 
-const SeconFilter = ({setFilter , setOrder})=>{
+const Filter = ({setFilter , setOrder})=>{
+
     const [width, setWidth] = useState(0);
 
     useEffect(() => {
@@ -16,32 +18,50 @@ const SeconFilter = ({setFilter , setOrder})=>{
       window.addEventListener("resize", updateWidth);
     }, []);
 
-    const toggleFilter = (e) => {
-        let actulFilter = e.target.innerHTML;
-        setFilter(actulFilter)
+   
+  const toggleFilter = (e) => {
+
+    let actualFilter = e.target.innerHTML;
+    setFilter(actualFilter)
+
+    let elementCurrent = e.target.classList[1];
+    if( elementCurrent !== "filter-active" ){
+      let actualCurrent = e.target.innerHTML;
+      let isCative = document.getElementsByClassName('filter-text');
+      for(let i = 0 ; i< isCative.length ; i++){
+        isCative[i].classList.remove('filter-active')
+        if(actualCurrent === isCative[i].innerHTML){
+          isCative[i].classList.add("filter-active");
+        }
+      }
     }
+  }
     return (
-        <div className="secontContainer">
+        <div className="filter-container">
             {
             width > 600 
                 ?
                 <div style={{display:"flex", alignItems:"center"}}>
-                    <h2 className="filter-text-title">Filtrar por</h2>  
-                    <ul style={{listStyle:"none" , display:"flex",alignItems:"center"}}>
+                    <h2 
+                        className="filter-text-title"
+                    >
+                        Filtrar por
+                    </h2>  
+                    <ul className='filter-list-desk'>
                         <li 
                             onClick={(e)=>toggleFilter(e)}
-                            className='order-text'>Todos</li>
+                            className='filter-text filter-active'>Todos</li>
                         <li 
                             onClick={(e)=>toggleFilter(e)}
-                            className='order-text'>
+                            className='filter-text'>
                             Autos</li>
                         <li 
                             onClick={(e)=>toggleFilter(e)}
-                            className='order-text'>
+                            className='filter-text'>
                             Pickups y Comerciales</li>
                         <li 
                             onClick={(e)=>toggleFilter(e)}
-                            className='order-text'>
+                            className='filter-text'>
                             SUVs y Crossovers
                         </li>
                     </ul>
@@ -70,7 +90,7 @@ const SeconFilter = ({setFilter , setOrder})=>{
                 </ToggleComponent>
             }
             
-            <ToggleComponent name="Ordenar por" right='10px'>
+            <ToggleComponent name="Ordenar por" right={width > 650 ? "17%" : "10px"}>
                <OrderComponent setOrder={setOrder}/>
             </ToggleComponent>
         </div>
@@ -90,8 +110,16 @@ const ToggleComponent =({children , name , right , left})=>{
     }
     return(
         <div style={{alignItems:"center" , padding:"10px"}}>
-            <h2 onClick={handleHidden} className="filter-text-title">{name}</h2>
-            <div hidden={isHiden} style={{position:"absolute" , left:left , right:right}}>
+            <h2 
+                onClick={handleHidden} 
+                className="filter-text-title"
+            >
+                {name}
+            </h2>
+            <div 
+                hidden={isHiden} 
+                style={{position:"absolute" , left:left , right:right}}
+            >
                 {children}
             </div>
         </div>
@@ -99,4 +127,4 @@ const ToggleComponent =({children , name , right , left})=>{
 }
 
 
-export default SeconFilter;
+export default Filter;

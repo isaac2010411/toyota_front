@@ -1,10 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import DescriptionSection from '../components/DescriptionSection';
-import Slider from '../components/Slider';
+import DescriptionSection from '../../components/DescriptionSection';
+import Slider from '../../components/Slider';
 
-import useModels from "../hooks/useModels";
+import useModels from "../../hooks/useModels";
 
 const ModelPage =()=>{
 

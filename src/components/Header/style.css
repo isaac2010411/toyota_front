@@ -8,18 +8,18 @@ header{
 
 .header-logo-container{
   display: flex;
-  width: 30%;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header-logo-container > ul {
+.header-logo-container > div {
+  margin-left: 50px;
   display: flex;
   padding: 3px;
   list-style: none;
-  align-items: center;
 }
 
-.header-text{
+.header-text-menu{
   height: 18px;
   font-family: Montserrat;
   font-size: 14px;
@@ -31,8 +31,26 @@ header{
   color: #191919;
 }
 
-@media only screen and (max-width: 600px) {
-  .header-logo-container > ul{
+.header-text{
+  text-decoration: none;
+  height: 18px;
+  font-family: Montserrat;
+  font-size: var(--letter-desk-size);
+  font-weight: var(--font-semi-bold);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(#191919);
+}
+
+@media only screen and (max-width: 760px) {
+  .header-logo-container > div{
    display: none;
   }
+  .header-text-menu{
+    display: none;
+  }
 }
+
+

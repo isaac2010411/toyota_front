@@ -1,3 +1,4 @@
+ 
 :root {
   --white: #ffffff;
   --cherry-red: #eb0a1e;
@@ -58,61 +59,6 @@
 
 }
 
-.Text-Style-6 {
-  font-family: Montserrat;
-  font-size: 50px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 57px;
-  letter-spacing: -1px;
-  color: #373737;
-}
-
-.Text-Style-2 {
-  font-family: Montserrat;
-  font-size: 35px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.26;
-  letter-spacing: -0.7px;
-  color: #191919;
-}
-
-.Text-Style-4 {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--cherry-red);
-}
-
-
-.Text-Style-5 {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #191919;
-}
-.Text-Style-Menu{
-  height: 18px;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #191919;
-}
 .Text-Style-3 {
   font-family: ToyotaType;
   font-size: 13px;
@@ -125,16 +71,3 @@
   color: var(--white);
 }
 
-@media only screen and (max-width: 600px) {
-  .Text-Style-6 {
-    height: 88px;
-    font-family: Montserrat;
-    font-size: 35px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.26;
-    letter-spacing: -0.7px;
-    color: #191919;
-  }
-}

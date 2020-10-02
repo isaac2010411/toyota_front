@@ -1,0 +1,16 @@
+.home-title{
+    font-family: Montserrat;
+    font-size: var(--title-desk-size);
+    font-weight: var(--font-bold);
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 57px;
+    letter-spacing: -1px;
+    color: var(--title-color-principal);
+    margin:  50px 10%   50px 10% ;
+}
+
+.home-grid-container{
+    display: flex;
+    justify-content: center;
+}

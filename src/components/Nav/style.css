@@ -4,7 +4,7 @@ nav{
     background-color: white;
     z-index: 3;
     float: right;
-    background: linear-gradient(180deg, white 53%, #efeeef 47%);
+    background: linear-gradient(180deg, white 75%, #efeeef 25%);
 }
 
 .nav-close{
@@ -12,13 +12,13 @@ nav{
     text-align: right;
     margin-right: 25px;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: var(--letter-desk-size);
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    color: var(--title-color-secondary);
 }
 
 .nav-text{
@@ -26,13 +26,13 @@ nav{
     margin-right: 15%;
     font-family: Montserrat;
     font-size: 20px;
-    font-weight: normal;
+    font-weight: var(--font-normal);
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: -0.1px;
     text-align: right;
-    color: #000000;
+    color: var(--title-color-secondary);
 }
 .nav-ul{
     list-style: none;
@@ -59,7 +59,7 @@ nav{
         background-color: white;
         z-index: 3;
         margin: auto;
-        background: linear-gradient(180deg, white 67%, #efeeef 33%);
+        background: linear-gradient(180deg, white 85%, #efeeef 15%);
     }
     .dark{
         position: absolute;
