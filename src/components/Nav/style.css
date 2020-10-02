@@ -2,14 +2,15 @@ nav{
     height: 100%;
     width: 25%;
     background-color: white;
-    padding: 3px;
     z-index: 3;
     float: right;
+    background: linear-gradient(180deg, white 53%, #efeeef 47%);
 }
 
 .nav-close{
     height: 18px;
     text-align: right;
+    margin-right: 25px;
     font-family: Montserrat;
     font-size: 14px;
     font-weight: normal;
@@ -21,6 +22,8 @@ nav{
 }
 
 .nav-text{
+    padding: 5px;
+    margin-right: 15%;
     font-family: Montserrat;
     font-size: 20px;
     font-weight: normal;
@@ -31,38 +34,40 @@ nav{
     text-align: right;
     color: #000000;
 }
-
-nav > ul {
+.nav-ul{
+    list-style: none;
+    justify-content: center;
+    margin: 0%;
     padding: 0%;
-    margin-right: 20%;
 }
 
 .dark{
     position: absolute;
-    margin-top: -73px;
-    height: 100%;
-    width: 100%;
-    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     background-color: black;
 }
 
 
 @media only screen and (max-width: 600px) {
-  nav{
-      width: 100%;
-      height: 100%;
-  }
-  nav > ul {
-      margin-top: -10px;
-  }
-  nav > ul :first-child{
-      margin-right: -30px;
-  }
-  .dark{
-    display: flex;
-    justify-content: center;
-    margin-top: -4px;
-    margin-bottom: 100px;
-    max-height: 900px;
-  }
+    nav{
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        z-index: 3;
+        margin: auto;
+        background: linear-gradient(180deg, white 67%, #efeeef 33%);
+    }
+    .dark{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: black;
+    }
 }

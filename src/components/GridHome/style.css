@@ -5,9 +5,35 @@
     row-gap: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 200px) {
     .grid-container{
         grid-template-columns: repeat(1,268px);
+        column-gap: 50px;
+        row-gap: 50px;
+    }    
+}
+
+
+@media only screen and (min-width: 630px) {
+    .grid-container{
+        grid-template-columns: repeat(2,268px);
+        column-gap: 50px;
+        row-gap: 50px;
+    }    
+}
+
+
+@media only screen and (min-width: 930px) {
+    .grid-container{
+        grid-template-columns: repeat(3,268px);
+        column-gap: 50px;
+        row-gap: 50px;
+    }    
+}
+
+@media only screen and (min-width: 1200px) {
+    .grid-container{
+        grid-template-columns: repeat(4,268px);
         column-gap: 50px;
         row-gap: 50px;
     }    

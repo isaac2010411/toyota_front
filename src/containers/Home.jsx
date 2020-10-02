@@ -5,9 +5,7 @@ import "../styles.css";
 import useModels from "../hooks/useModels";
 import GridHome from "../components/GridHome";
 import Card from "../components/Card/Index";
-import OrderComponent from "../components/OrderComponent";
 import SeconFilter from "../components/SeconFilter";
-
 
 
 export default function Home() {
