@@ -14,7 +14,7 @@ const Slider =({features})=>{
         setActualFeatures(f)
     }
 
-    let actualizeAnt =()=>{
+    let actualizeBack =()=>{
         let first= actualFeatures[actualFeatures.length-1];
         actualFeatures.pop();
         let f = [   first , ...actualFeatures ]
@@ -23,10 +23,10 @@ const Slider =({features})=>{
 
     let handleCurrent = (e)=>{
         let action = e.target.name;
-        if(action === "nex"){
+        if(action === "next"){
             return actualizeNext();
         }
-        return actualizeAnt();
+        return actualizeBack();
     }
 
     return(
@@ -34,12 +34,12 @@ const Slider =({features})=>{
             <div 
                 className="slide-container-buttons-r"
                 onClick={(e)=>handleCurrent(e)}
-                name='ant' 
+                name='back' 
             >
                <img 
                     className='slide-buttons' 
                     src={Fill} 
-                    alt=''
+                    alt='slide-buttom-back'
                 />
             </div>
             {
@@ -55,11 +55,14 @@ const Slider =({features})=>{
                         <p className='slide-card-text'>{fe.description}</p>
                     </figure>
                 ))
-            } 
+            }
+            <>
+                <button>O</button>
+            </>
              <div 
                 className="slide-container-buttons-l"
                 onClick={(e)=>handleCurrent(e)} 
-                name='nex' 
+                name='next' 
                 >
                <img 
                     className='slide-buttons'
