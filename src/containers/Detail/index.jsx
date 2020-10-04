@@ -5,7 +5,7 @@ import DescriptionSection from '../../components/DescriptionSection';
 import Slider from '../../components/Slider';
 
 import useModels from "../../hooks/useModels";
-
+import './style.css';
 const ModelPage =()=>{
 
   let id = useHistory().location.pathname.slice(1);
