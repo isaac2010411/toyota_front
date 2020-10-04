@@ -4,7 +4,7 @@ nav{
     background-color: white;
     z-index: 3;
     float: right;
-    background: linear-gradient(180deg, white 75%, #efeeef 25%);
+    background: linear-gradient(180deg, white 65%, #efeeef 35%);
 }
 
 .nav-close{
