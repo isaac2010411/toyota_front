@@ -12,6 +12,7 @@
 .description-image-container{
     width: 40%;
     margin: auto;
+    padding: 15px;
 }
 
 .description-image-container > img {
