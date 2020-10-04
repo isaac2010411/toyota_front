@@ -8,12 +8,15 @@ const NavComponent =({isTogle , isToggleMenu})=>{
     return(
         <div className={isTogle[1]}>
             <nav style={{display:isTogle[0]}}>
-                <ul  className='nav-ul' >
+                <ul  
+                    className='nav-ul-close'
+                 >
                     <li 
-                        className='nav-close' 
-                        style={{textAlign:"right"}}
+                        className='nav-close'
                     >   
                             Cerrar
+                    </li>
+                    <li>
                         <img 
                             onClick={isToggleMenu}
                             src={Fill} 

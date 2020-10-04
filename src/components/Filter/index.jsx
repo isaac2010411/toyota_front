@@ -114,7 +114,7 @@ const ToggleComponent =({children , name , right , left})=>{
                 className="filter-text-title"
             >
                 {name}
-                <img src={Fill} alt='filter-image' style={{ transform:`${isHiden ? 'rotate(-180deg)' : 'rotate(0deg)'}`}}></img>
+                <img src={Fill} alt='filter-image' style={{ transform:`${isHiden ? 'rotate(-180deg)' : 'rotate(0deg)'}`,marginLeft:"10px"}}></img>
             </h2>
             <div 
                 hidden={isHiden} 

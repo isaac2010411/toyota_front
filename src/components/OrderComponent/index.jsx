@@ -19,6 +19,7 @@ const OrderComponent =({setOrder})=>{
         <li 
           onClick={(e)=>toggleOrder(e)} 
           className='order-text'
+          name="Nada"
         >
           Nada
         </li>
