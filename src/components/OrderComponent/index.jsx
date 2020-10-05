@@ -7,12 +7,10 @@ const OrderComponent =({setOrder})=>{
 
 
   let toggleOrder =(e)=>{
-    let action = e.target.innerHTML
-    console.log((action))
+    let action = e.target.innerHTML;
     if(action === "Nada"){
      return setOrder("nada");
     }
-    console.log(action)
     setOrder(action);
   }
 
