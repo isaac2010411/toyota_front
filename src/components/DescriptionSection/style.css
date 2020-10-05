@@ -9,10 +9,7 @@
 .description-image-container{
     width: 40%;
 }
-.description-container :first-child  :hover{
-    transform: translate(-100% );
-    transition-duration: 5s;
-}
+
 
 .description-image-container > img {
     width: 100%;
