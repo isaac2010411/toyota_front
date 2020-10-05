@@ -7,11 +7,12 @@ const OrderComponent =({setOrder})=>{
 
 
   let toggleOrder =(e)=>{
-    let action = e.target.innerHTML.split(" ")[2]
-
-    if(action === undefined){
+    let action = e.target.innerHTML
+    console.log((action))
+    if(action === "Nada"){
      return setOrder("nada");
     }
+    console.log(action)
     setOrder(action);
   }
 
@@ -25,28 +26,28 @@ const OrderComponent =({setOrder})=>{
           Nada
         </li>
         <li 
-          onClick={(e)=>toggleOrder(e)} 
+          
           className='order-text'
         >
-            De <strong> menor </strong>  a <strong>mayor</strong>  precio
+            De <strong onClick={(e)=>toggleOrder(e)} >menor</strong> a <strong>mayor</strong>  precio
         </li>
         <li 
-          onClick={(e)=>toggleOrder(e)} 
+         
           className='order-text'
         >
-          De <strong>  mayor </strong> a <strong>menor</strong> precio
+          De <strong onClick={(e)=>toggleOrder(e)} >mayor</strong> a <strong> menor </strong> precio
         </li>
         <li 
-          onClick={(e)=>toggleOrder(e)} 
+          
           className='order-text'
         >
-          Más <strong> nuevos </strong> primero
+          Más <strong onClick={(e)=>toggleOrder(e)} >nuevos</strong> primero
         </li>
         <li 
-          onClick={(e)=>toggleOrder(e)} 
+         
           className='order-text'
         >
-          Más <strong> viejos </strong> primero </li>
+          Más <strong  onClick={(e)=>toggleOrder(e)} >viejos</strong> primero </li>
       </ul>
     </div>
   )

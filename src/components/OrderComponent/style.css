@@ -11,8 +11,8 @@
     margin: 0% auto ;
     
 }
-.toggle-list-container > ul  {
-   text-decoration-color: aqua;
+strong{
+    cursor: pointer;
 }
 
 .order-text{
