@@ -30,7 +30,9 @@ header{
   letter-spacing: normal;
   color:var(--text-color-description);
 }
-
+header :last-child > img {
+  cursor: pointer;
+}
 .header-text{
   text-decoration: none;
   height: 18px;

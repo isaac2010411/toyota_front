@@ -37,6 +37,7 @@
 }
 
 .slide-container-buttons-l{
+    cursor: pointer;
     position: absolute;
     z-index: 50;
     display: flex;
@@ -49,6 +50,7 @@
     left: 97%;
 }
 .slide-container-buttons-r{
+    cursor: pointer;
     position: absolute;
     z-index: 50;
     display: flex;

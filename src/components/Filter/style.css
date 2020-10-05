@@ -18,7 +18,6 @@
 }
 
 .filter-text-title{
-    cursor: pointer;
     height: 14px;
     font-family: Montserrat;
     font-size: var(--letter-desk-size);
@@ -64,4 +63,7 @@
         justify-content: space-around;
 
     }    
+    .filter-text-title{
+        cursor: pointer;
+    }
 }
